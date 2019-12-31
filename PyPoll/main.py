@@ -26,15 +26,15 @@ with open(csvpath, 'r', newline='', encoding='utf-8') as csvfile:
         else:
             uniqueCandidate[row["Candidate"]] = 1
 
-        # percentages for each candidate by pulling info from items in the candidates dictionary
-        for key, value in uniqueCandidate.items():
-            candidatePercent[key] = round((value/totalVotes) * 100, 1)
+        #determine % for each candidate by pulling info from items in the uniqueCandidates dictionary
+        for name, value in uniqueCandidate.items():
+            candidatePercent[name] = round((value/totalVotes) * 100, 1)
 
-        # Finding the winner using the candidates dictionary. 
-        for key in uniqueCandidate.keys():
-            if uniqueCandidate[key] > winnerCount:
-                winner = key
-                winnerCount = uniqueCandidate[key]
+        #determine the winner using the uniqueCandidate dictionary 
+        for name in uniqueCandidate.keys():
+            if uniqueCandidate[name] > winnerCount:
+                winner = name
+                winnerCount = uniqueCandidate[name]
 
 print("Election Results")
 print("-------------------------------------")
