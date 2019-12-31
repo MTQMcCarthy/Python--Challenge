@@ -47,8 +47,4 @@ print("Winner: " + winner)
 print("-------------------------------------")
 
 
-print("Total Votes: " + str(totalVotes))
-#for key, value in candidates.items():
-print()
-
 
