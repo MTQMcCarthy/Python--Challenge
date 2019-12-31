@@ -40,8 +40,8 @@ print("Election Results")
 print("-------------------------------------")
 print("Total Votes: " + str(totalVotes))
 print("-------------------------------------")
-for key, value in uniqueCandidate.items():
-    print(key + ": " + str(candidatePercent[key]) + "% (" + str(value) + ")")
+for name, value in uniqueCandidate.items():
+    print(name + ": " + str(candidatePercent[name]) + "% (" + str(value) + ")")
 print("-------------------------------------")
 print("Winner: " + winner)
 print("-------------------------------------")
